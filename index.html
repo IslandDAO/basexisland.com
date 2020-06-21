@@ -57,9 +57,49 @@
 	</head>
 	<body ng-app="app">
 
+
+		<style>
+			.top-level {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				background: black;
+				color: white;
+				z-index: 1000;
+				padding: 10px 10px 10px 7rem;
+			}
+
+			.top-level a {
+				color: white;
+			}
+
+			@media screen and (max-width: 1680px) {
+				.top-level {
+					padding-left: 5rem;
+				}
+			}
+
+			@media screen and (max-width: 1280px) {
+				.top-level {
+					padding-left: 4rem;
+				}
+			}
+			@media screen and (max-width: 948px) {
+				.top-level {
+					padding-left: 10px;
+					text-align: center;
+				}
+			}
+
+
+		</style>
+
+		<div class="top-level">
+			The <a href="/#/bank">company and the bank account</a> are open. Raising 💰💰💰 to enable the purchase.<br>
+		</div>
+
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
-
 
 				<div ng-view autoscroll="true"></div>
 
@@ -121,7 +161,7 @@
 			</script>
 
 
-			<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+			<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 	</body>
 </html>
