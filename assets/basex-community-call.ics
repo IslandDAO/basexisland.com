@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ical.marudot.com//iCal Event Maker
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/London
+TZURL:http://tzurl.org/zoneinfo-outlook/Europe/London
+X-LIC-LOCATION:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20200622T205552Z
+UID:20200622T205552Z-1545040715@marudot.com
+DTSTART;TZID=Europe/London:20200629T170000
+DTEND;TZID=Europe/London:20200629T180000
+SUMMARY:BaseX island ☎️community call
+DESCRIPTION:16:00 UTC\n\n Check Twitter - https://twitter.com/basexisland - and Discord - https://basexisland.com/discord - for the actual links and agenda...\n\nCommunity call - expect to meet other fellow members and have fun while doing so!
+END:VEVENT
+END:VCALENDAR
