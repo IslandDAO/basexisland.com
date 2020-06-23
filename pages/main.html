@@ -500,64 +500,60 @@
                 }
             </style>
 
+
             <section class="wrapper style1 align-center">
                 <div class="inner">
                     <h2>Team</h2>
                     <p></p>
                     <div class="items style1 medium onscroll-fade-in">
-                        <section>
+                        <section ng-repeat="p in team">
                             <!-- <span class="icon solid style2 major fa-gem"></span> -->
-                            <img src="images/team/mars.jpg" class="team">
-                            <h3>Mars Robertson</h3>
-                            <p>Project Lead<br><a href="https://marsrobertson.com">marsrobertson.com</a>
-<!-- 										Registered in Estonian land register under numbers <a href="https://xgis.maaamet.ee/ky/63902:001:3377">63902:001:3377</a> and <a href="https://xgis.maaamet.ee/ky/63902:001:3378">63902:001:3378</a> -->
+                            <img src="images/team/{{p.image}}" class="team">
+                            <h3>{{p.name}}</h3>
+                            <p><span ng-bind-html="p.job | unsafe"></span><br>
+                                <a href="{{ p.link }}">{{ p.link.replace("http://", "").replace("https://", "") }}</a>
                             </p>
+                            <ul class="icons">
+                                <li ng-if="p.twitter"><a href="https://twitter.com/{{ p.twitter }}" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li ng-if="p.linkedin"><a href="https://linkedin.com/in/{{ p.linkedin }}" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                                <li ng-if="p.instagram"><a href="https://instagram.com/{{ p.instagram }}" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                            </ul>
                         </section>
-                        <section>
-                            <!-- <span class="icon style2 major fa-envelope"></span> -->
-                            <img src="images/team/joanna.jpg" class="team">
-                            <h3>Joanna Picetti</h3>
-                            <p>Argentinian Congresswoman<br>LatAm Ambassador</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wrapper style1 align-center">
+                <div class="inner">
+                    <h2>Advisors</h2>
+                    <p></p>
+                    <div class="items style1 medium onscroll-fade-in">
+                        <section ng-repeat="p in advisors">
+                            <!-- <span class="icon solid style2 major fa-gem"></span> -->
+                            <img src="images/team/{{p.image}}" class="team">
+                            <h3>{{p.name}}</h3>
+                            <p><span ng-bind-html="p.job | unsafe"></span><br>
+                                <a ng-if="p.link" href="{{ p.link }}">{{ p.link.replace("http://", "").replace("https://", "") }}</a>
+                                <span ng-if="!p.link">&nbsp;</span>
+                            </p>
+                            <ul class="icons">
+                                <li ng-if="p.twitter"><a href="https://twitter.com/{{ p.twitter }}" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li ng-if="p.linkedin"><a href="https://linkedin.com/in/{{ p.linkedin }}" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                                <li ng-if="p.instagram"><a href="https://instagram.com/{{ p.instagram }}" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                            </ul>
                         </section>
-                        <section>
-                            <!-- <span class="icon style2 major fa-envelope"></span> -->
-                            <img src="images/team/camille.jpg" class="team">
-                            <h3>Camille Corti</h3>
-                            <p>Creative Advisor<br>1st Committed Investor<br><a href="http://blockchainhippy.io/">blockchainhippy.io</a></p>
-                        </section>                        
-                        <section>
-                            <!-- <span class="icon style2 major fa-envelope"></span> -->
-                            <img src="images/team/gamithra.jpg" class="team">
-                            <h3>Gamithra Marga</h3>
-                            <p>Open-source person<br><a href="http://gamithra.com">gamithra.com</a></p>
-                        </section>
-                        <section>
-                            <!-- <span class="icon style2 major fa-envelope"></span> -->
-                            <img src="images/team/dan.jpg" class="team">
-                            <h3>Dan Matthews</h3>
-                            <p>Full stack extraordinaire<br><a href="http://cryptobuilders.io/">cryptobuilders.io</a></p>
-                        </section>
-                        <section>
-                            <!-- <span class="icon style2 major fa-envelope"></span> -->
-                            <img src="images/team/elon.jpg" class="team">
-                            <h3>Elon Musk</h3>
-                            <p>Chief Meme Officer</p>
-                        </section>
+                    </div>
+
+
+                    <h2>Join us</h2>
+                    <div class="items style1 medium onscroll-fade-in">
                         <section>
                             <!-- <span class="icon style2 major fa-envelope"></span> -->
                             <img src="images/team/welcome.jpg" class="team">
-                            <h3>Join Us</h3>
-                            <p>Join the <a href="http://basexisland.com/discord">Discord chat</a> or book a call directly: <a href="https://calendly.com/marsxr/basex">calendly.com/marsxr/basex</a></p>
+                            <h3>Be part of something big</h3>
+                            <p>Join the <a href="http://basexisland.com/discord">Discord chat</a><br>
+                               Book a call: <a href="https://calendly.com/marsxr/basex">calendly.com/marsxr/basex</a></p>
                         </section>
-                        
-                        <!-- 
-                        <section>
-                            <span class="icon solid style2 major fa-cog"></span>
-                            <h3>Legal vehicle</h3>
-                            <p>Estonia is stable and reputable government.</p>
-
-                        </section> -->
-
                     </div>
 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Eyldung77wI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
