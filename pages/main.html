@@ -512,6 +512,7 @@
                             <h3>{{p.name}}</h3>
                             <p><span ng-bind-html="p.job | unsafe"></span><br>
                                 <a href="{{ p.link }}">{{ p.link.replace("http://", "").replace("https://", "") }}</a>
+                                <a ng-if="!p.link">&nbsp;</a>
                             </p>
                             <ul class="icons">
                                 <li ng-if="p.twitter"><a href="https://twitter.com/{{ p.twitter }}" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
@@ -534,7 +535,6 @@
                             <h3>{{p.name}}</h3>
                             <p><span ng-bind-html="p.job | unsafe"></span><br>
                                 <a ng-if="p.link" href="{{ p.link }}">{{ p.link.replace("http://", "").replace("https://", "") }}</a>
-                                <span ng-if="!p.link">&nbsp;</span>
                             </p>
                             <ul class="icons">
                                 <li ng-if="p.twitter"><a href="https://twitter.com/{{ p.twitter }}" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
