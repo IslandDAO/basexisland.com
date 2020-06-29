@@ -22,11 +22,11 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTAMP:20200622T205552Z
-UID:20200622T205552Z-1545040715@marudot.com
-DTSTART;TZID=Europe/London:20200629T170000
-DTEND;TZID=Europe/London:20200629T180000
-SUMMARY:BaseX island ☎️community call
+DTSTAMP:20200629T193923Z
+UID:20200629T193923Z-28016146@marudot.com
+DTSTART;TZID=Europe/London:20200713T170000
+DTEND;TZID=Europe/London:20200713T180000
+SUMMARY:BaseX community ☎️
 DESCRIPTION:16:00 UTC\n\n Check Twitter - https://twitter.com/basexisland - and Discord - https://basexisland.com/discord - for the actual links and agenda...\n\nCommunity call - expect to meet other fellow members and have fun while doing so!
 END:VEVENT
 END:VCALENDAR
