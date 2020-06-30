@@ -574,11 +574,8 @@
                             </ul>
                         </section>
                     </div>
-                </div>
-            </section>
 
-            <section class="wrapper style1 align-center">
-                <div class="inner">
+
                     <h2>Advisors</h2>
                     <p></p>
                     <div class="items style1 medium onscroll-fade-in">
@@ -609,7 +606,36 @@
                         </section>
                     </div>
 
-                    <!--
+                    <h2>Memes and inspiration</h2>
+                    <p></p>
+                    <div class="items style1 medium onscroll-fade-in">
+                        <section ng-repeat="p in memery">
+                            <!-- <span class="icon solid style2 major fa-gem"></span> -->
+                            <img src="images/team/{{p.image}}" class="team">
+                            <h3>{{p.name}}</h3>
+                            <p><span ng-bind-html="p.job | unsafe"></span><br>
+                                <a ng-if="p.link" href="{{ p.link }}">{{ p.link.replace("http://", "").replace("https://", "") }}</a>
+                            </p>
+                            <ul class="icons">
+                                <li ng-if="p.twitter"><a href="https://twitter.com/{{ p.twitter }}" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li ng-if="p.linkedin"><a href="https://linkedin.com/in/{{ p.linkedin }}" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                                <li ng-if="p.instagram"><a href="https://instagram.com/{{ p.instagram }}" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                            </ul>
+                        </section>
+                    </div>
+
+
+                </div>
+
+
+
+            </section>
+
+            <section class="wrapper style1 align-center">
+                <div class="inner">
+
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Who controls the memes,<br>controls the Universe</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1276418907968925696?ref_src=twsrc%5Etfw">June 26, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Eyldung77wI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -619,25 +645,29 @@
                     <h2>Elon &nbsp; ➡️ &nbsp; SpaceX &nbsp; ➡️ &nbsp; Mars</h2>
                     <h2>Mars &nbsp; ➡️ &nbsp; BaseX &nbsp; ➡️ &nbsp; Earth</h2>
 
-                    <p style="max-width: 600px; text-align: left; margin: 0 auto;">100% on making life sustainably multiplanetary but there are still some chances to preserve the life on Earth. COVID gave me loads of hope, change is possible!<br>
+                    <p style="max-width: 600px; text-align: left; margin: 0 auto;">100% on making life sustainably multiplanetary but there are still some chances to preserve the life on Earth.
                         
+                        <br><br>COVID gave me loads of hope, change is possible!<br>
+                        
+                    <!--
                     <br>
                     BaseX is committed to survival of civilisation in multiple ways:<br>
                         • Developing human communication protocols<br>
                         • Training future world leaders<br>
                         • Scalable habitat technology<br>
-                    
                     <br>
+                    -->
                     
+                    <!-- 
                     Massive transformational purpose:<br>
                     <b>Realising human potential to heal the planet(s)</b><br>
 
                     <br>
 
-                    We are definitely concerned by the catastrophic climate change, making some places unhabitable <i>(rising sea levels, extreme heatwaves)</i> as well as food shortages due to the breakdown of the weather patterns. It would be super helpful if you could read "Deep Adaptation" paper - one of the most impactful work in the field of the climate sciene.
-
+                    We are definitely concerned by the catastrophic climate change, making some places unhabitable <i>(rising sea levels, extreme heatwaves)</i> as well as food shortages due to the breakdown of the weather patterns. 
+                    
+                    It would be super helpful if you could read "Deep Adaptation" paper - one of the most impactful work in the field of the climate sciene.
                     -->
-
 
                 </div>
 
